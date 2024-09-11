@@ -1,0 +1,16 @@
+name: newbie-project
+
+packages:
+  - modules/*
+
+command:
+  bootstrap:
+    runPubGetInParallel: false
+
+scripts:
+  gen-l10n:
+    exec: flutter gen-l10n
+    ignoreErrors: true
+  generate:
+    exec: flutter pub run build_runner build --delete-conflicting-outputs
+    ignoreErrors: true  
