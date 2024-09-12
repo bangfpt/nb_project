@@ -11,4 +11,6 @@
 //   asExtension: true, // default
 //   generateForDir: ['di'],
 // )
-// void configureDependencies() => getIt.();
+// void configureDependencies() async {
+//   getIt.registerFactory<AuthCubit>(() => AuthCubit);
+// }
