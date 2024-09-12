@@ -1,5 +1,4 @@
 import 'package:auth/data/data.dart';
-import 'package:auth/data/repository_impl.dart';
 import 'package:auth/presentation/screen/auth/form/sign_in_form_model.dart';
 import 'package:core/core/const/status_enum.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +16,7 @@ class SignInScreen extends StatelessWidget implements AutoRouteWrapper {
 
   @override
   Widget wrappedRoute(BuildContext context) {
-    return BlocProvider(
-        create: (context) => AuthCubit(GetIt.instance.get<AuthRepositoryImpl>));
+    return BlocProvider(create: (context) => GetIt.instance.get<AuthCubit>());
   }
 
   @override

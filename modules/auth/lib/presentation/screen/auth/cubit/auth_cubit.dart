@@ -13,7 +13,7 @@ part 'auth_state.dart';
 part 'auth_cubit.freezed.dart';
 
 class AuthCubit extends Cubit<AuthState> {
-  AuthCubit(param0) : super(const _AuthState());
+  AuthCubit() : super(const _AuthState());
 
   Future<void> signIn(LoginParam data) async {
     emit(state.copyWith(status: CommonStatus.loading));

@@ -1,3 +1,4 @@
+import 'package:core/core/localization/localization.dart';
 import 'package:core/core/module/base_module.dart';
 import 'package:flutter/widgets.dart';
 

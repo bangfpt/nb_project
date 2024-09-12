@@ -9,9 +9,9 @@ class _AuthModuleImp extends AuthModule {
     GetIt.instance.registerSingleton(AuthController());
   }
 
-  // @override
-  // LocalizationsDelegate get localizationsDelegate =>
-  //     ModuleLocalizationsDelegate();
+  @override
+  LocalizationsDelegate get localizationsDelegate =>
+      const ModuleLocalizationsDelegate();
 
   @override
   Future<void> start(BuildContext context) {
