@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
-import '../network/network_module.dart';
+import 'network_module.dart';
 
 @module
 abstract class NetworkModuleImpl {
