@@ -8,10 +8,9 @@ import '../presentation/routes.dart';
 import 'use_case/logged_use_case.dart';
 
 class AuthController {
-  late Completer completer;
+  Completer completer = Completer();
 
   Future<void> auth(BuildContext context) {
-    completer = Completer();
     final result = LoggedUseCase(GetIt.instance.get<Repository>()).logged();
     result.fold((left) {
       if (left) {

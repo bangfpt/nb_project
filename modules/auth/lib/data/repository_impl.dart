@@ -15,7 +15,8 @@ class AuthRepositoryImpl extends Repository {
   @override
   Future<void> login(String username, String password) async {
     try {
-      final response = await authApi.login(LoginParam(username, password));
+      final params = LoginParam(username, password);
+      final response = await authApi.login(params);
 
       await saveAccessToken(response.accessToken);
     } catch (e) {
