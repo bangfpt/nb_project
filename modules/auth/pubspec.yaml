@@ -23,6 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  core:
+    path: ../core
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -31,21 +33,42 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^4.0.0
 
   #build
   build_runner: ^2.4.12
   injectable_generator: ^2.6.2
   retrofit_generator: ^9.1.2
+  freezed: ^2.5.7
+  freezed_annotation: ^2.4.4
 
   #model
   injectable: ^2.4.4
   json_serializable: ^6.8.0
   json_annotation: ^4.9.0
 
+  #reactive
+  reactive_forms_annotations: ^5.0.0
+  reactive_forms: ^17.0.1
+  reactive_forms_generator: ^5.0.5
+
   #network
   retrofit: ^4.4.1
   flutter_dotenv: ^5.1.0
+
+  #state_management
+  flutter_bloc: ^8.1.6
+
+  #instance
+  get_it: ^7.7.0
+
+  #ui
+  flutter_easyloading: ^3.0.5
+  gradient_elevated_button: ^1.0.0
+
+  #route
+  auto_route: ^9.2.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -87,7 +110,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
-
 
   # This section identifies your Flutter project as a module meant for
   # embedding in a native host app.  These identifiers should _not_ ordinarily
