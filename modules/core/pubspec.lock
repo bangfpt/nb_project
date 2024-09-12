@@ -143,7 +143,7 @@ packages:
     source: hosted
     version: "2.3.7"
   dio:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: dio
       sha256: "5598aa796bbf4699afd5c67c0f5f6e2ed542afc956884b9cd58c306966efc260"
@@ -188,7 +188,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_dotenv:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_dotenv
       sha256: "9357883bdd153ab78cbf9ffa07656e336b8bbb2b5a3ca596b0b27e119f7c7d77"
@@ -241,7 +241,7 @@ packages:
     source: hosted
     version: "2.4.4"
   injectable_generator:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: injectable_generator
       sha256: af403d76c7b18b4217335e0075e950cd0579fd7f8d7bd47ee7c85ada31680ba1
@@ -337,7 +337,7 @@ packages:
     source: hosted
     version: "1.9.0"
   pretty_dio_logger:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: pretty_dio_logger
       sha256: "36f2101299786d567869493e2f5731de61ce130faa14679473b26905a92b6407"
@@ -422,7 +422,7 @@ packages:
     source: hosted
     version: "0.7.2"
   tuple:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: tuple
       sha256: a97ce2013f240b2f3807bcbaf218765b6f301c3eff91092bcfa23a039e7dd151
