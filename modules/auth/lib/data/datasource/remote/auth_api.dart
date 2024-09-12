@@ -9,6 +9,6 @@ part 'auth_api.g.dart';
 abstract class AuthApi {
   factory AuthApi(Dio dio) = _AuthApi;
 
-  @POST('/login')
+  @POST('/auth/login')
   Future<LoginModel> login(@Body() LoginParam model);
 }

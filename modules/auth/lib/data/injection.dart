@@ -21,8 +21,19 @@ class DataInjection {
   }
 
   void _injectRemoteService() {
-    _getIt.registerLazySingleton(() => Dio());
-    _getIt.registerLazySingleton(() => AuthApi(_getIt.get<Dio>()));
+    final dio = Dio();
+    dio
+      ..options.baseUrl = 'https://fakestoreapi.com'
+      ..options.connectTimeout = const Duration(seconds: 15)
+      ..options.receiveTimeout = const Duration(seconds: 15)
+      ..options.headers = {
+        'Content-Type': 'application/json; charset=utf-8',
+      };
+
+    _getIt.registerLazySingleton(() {
+      return dio;
+    });
+    _getIt.registerLazySingleton(() => AuthApi(dio));
     _getIt.registerLazySingleton<Repository>(() => AuthRepositoryImpl(
           _getIt.get<AuthApi>(),
           _getIt.get<SharedPreference>(),
