@@ -21,14 +21,11 @@ class DataInjection {
   }
 
   void _injectRemoteService() {
+    _getIt.registerLazySingleton(() => Dio());
     _getIt.registerLazySingleton(() => AuthApi(_getIt.get<Dio>()));
     _getIt.registerLazySingleton<Repository>(() => AuthRepositoryImpl(
           _getIt.get<AuthApi>(),
           _getIt.get<SharedPreference>(),
         ));
-    // _getIt.registerLazySingleton<AuthInterceptor>(
-    //     () => AuthInterceptor(_getIt.get<Dio>(), _getIt.get<Repository>()));
-
-    // _getIt.get<Dio>().interceptors.add(_getIt.get<AuthInterceptor>());
   }
 }

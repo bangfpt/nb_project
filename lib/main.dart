@@ -1,3 +1,4 @@
+import 'package:auth/data/injection.dart';
 import 'package:auth/presentation/screen/auth/cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,12 +13,14 @@ import 'routes.dart';
 
 void main() {
   FlavorConfig.initValue([AppEnv.dev], canAccessDevelopmentMode: true);
+
   start();
 }
 
 void start() async {
   FlavorConfig.env.modules.initEnv();
   await FlavorConfig.env.modules.inject();
+  DataInjection().inject();
   runApp(const MyApp());
 }
 
