@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 import 'package:get_it/get_it.dart';
-import 'package:auth/domain/repository.dart';
+import 'package:auth/domain/auth_repository.dart';
 import 'package:flutter/material.dart';
 
 import '../presentation/routes.dart';
@@ -11,7 +11,7 @@ class AuthController {
   Completer completer = Completer();
 
   Future<void> auth(BuildContext context) {
-    final result = LoggedUseCase(GetIt.instance.get<Repository>()).logged();
+    final result = LoggedUseCase(GetIt.instance.get<AuthRepository>()).logged();
     result.fold((left) {
       if (left) {
         completer.complete();
@@ -30,7 +30,7 @@ class AuthController {
     }
   }
 
-  bool isAuth() => LoggedUseCase(GetIt.instance.get<Repository>())
+  bool isAuth() => LoggedUseCase(GetIt.instance.get<AuthRepository>())
       .logged()
       .fold((left) => left, (right) => false);
 }

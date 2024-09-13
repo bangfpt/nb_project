@@ -1,6 +1,6 @@
 import 'package:auth/data/data.dart';
 import 'package:auth/domain/auth_controller.dart';
-import 'package:auth/domain/repository.dart';
+import 'package:auth/domain/auth_repository.dart';
 import 'package:auth/domain/use_case/login_use_case.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:core/core/utils/either.dart';
@@ -18,7 +18,7 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> signIn(LoginParam data) async {
     emit(state.copyWith(status: CommonStatus.loading));
     final Either<void, Exception> result =
-        await LoginUseCase(GetIt.instance.get<Repository>()).login(
+        await LoginUseCase(GetIt.instance.get<AuthRepository>()).login(
       data.username,
       data.password,
     );

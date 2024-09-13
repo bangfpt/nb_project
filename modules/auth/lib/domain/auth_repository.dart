@@ -1,4 +1,4 @@
-abstract class Repository {
+abstract class AuthRepository {
   String? get accessToken;
 
   Future<void> saveAccessToken(String accessToken);
