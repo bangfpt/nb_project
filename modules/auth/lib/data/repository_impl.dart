@@ -18,7 +18,7 @@ class AuthRepositoryImpl extends Repository {
       final params = LoginParam(username, password);
       final response = await authApi.login(params);
 
-      await saveAccessToken(response.accessToken);
+      await saveAccessToken(response.token);
     } catch (e) {
       log('login error $e');
     }

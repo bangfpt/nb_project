@@ -35,7 +35,7 @@ class _AuthApi implements AuthApi {
     )
         .compose(
           _dio.options,
-          '/login',
+          '/auth/login',
           queryParameters: queryParameters,
           data: _data,
         )

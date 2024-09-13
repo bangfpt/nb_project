@@ -6,9 +6,12 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Center(
-        child: Text('Splash screen'),
+        child: Text(
+          'Splash screen',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
     );
   }
