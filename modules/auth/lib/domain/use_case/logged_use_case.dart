@@ -1,9 +1,9 @@
 import 'package:core/core/utils/either.dart';
 
-import '../repository.dart';
+import '../auth_repository.dart';
 
 class LoggedUseCase {
-  final Repository _repository;
+  final AuthRepository _repository;
 
   LoggedUseCase(this._repository);
 

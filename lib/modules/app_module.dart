@@ -1,7 +1,9 @@
-import 'package:auth/presentation/auth_module.dart';
-import 'package:core/core/localization/localization.dart';
-import 'package:core/core/module/base_module.dart';
 import 'package:flutter/material.dart';
+
+import 'package:auth/presentation/auth_module.dart';
+import 'package:core/core/module/base_module.dart';
+import 'package:core/core/localization/localization.dart';
+import 'package:product/presentation/product_module.dart';
 
 import 'base_module.dart';
 
@@ -14,6 +16,7 @@ class AppModules extends BaseModules {
   void initEnv() {
     modules.addAll([
       AuthModule.instance,
+      ProductModule.instance,
     ]);
   }
 

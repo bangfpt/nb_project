@@ -1,12 +1,12 @@
 import 'dart:developer';
 import 'package:auth/data/data.dart';
 
-import 'datasource/local/shared_preference.dart';
-import 'datasource/remote/auth_api.dart';
+import '../data/datasource/local/shared_preference.dart';
+import '../data/datasource/remote/auth_api.dart';
 
-import '../domain/repository.dart';
+import 'auth_repository.dart';
 
-class AuthRepositoryImpl extends Repository {
+class AuthRepositoryImpl extends AuthRepository {
   AuthApi authApi;
   SharedPreference sharedPreference;
 

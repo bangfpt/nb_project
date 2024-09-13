@@ -2,25 +2,15 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:product/data/datasource/remote/product_api.dart';
+import 'package:product/domain/product_repository.dart';
+import 'package:product/domain/product_repository_impl.dart';
 
-import 'package:auth/data/datasource/remote/auth_api.dart';
-
-import '../domain/auth_repository_impl.dart';
-import '../domain/auth_repository.dart';
-import 'datasource/local/shared_preference.dart';
-import 'datasource/local/shared_prefrence_imp.dart';
-
-class DataInjection {
+class ProductInjection {
   final _getIt = GetIt.instance;
 
   Future<void> inject() async {
-    await _injectLocalService();
     _injectRemoteService();
-  }
-
-  Future<void> _injectLocalService() async {
-    _getIt.registerSingleton<SharedPreference>(SharedPreferenceImp());
-    await _getIt.get<SharedPreference>().initialize();
   }
 
   void _injectRemoteService() {
@@ -47,10 +37,9 @@ class DataInjection {
     _getIt.registerLazySingleton(() {
       return dio;
     });
-    _getIt.registerLazySingleton(() => AuthApi(dio));
-    _getIt.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(
-          _getIt.get<AuthApi>(),
-          _getIt.get<SharedPreference>(),
+    _getIt.registerLazySingleton(() => ProductApi(dio));
+    _getIt.registerLazySingleton<ProductRepository>(() => ProductRepositoryImpl(
+          _getIt.get<ProductApi>(),
         ));
   }
 }

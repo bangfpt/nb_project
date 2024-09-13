@@ -7,6 +7,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'package:auth/data/injection.dart';
+import 'package:product/data/injection.dart';
+import 'package:product/presentation/cubit/products_cubit.dart';
 import 'package:auth/presentation/screen/auth/cubit/auth_cubit.dart';
 
 import 'routes.dart';
@@ -30,6 +32,7 @@ void start() async {
       statusBarBrightness: Brightness.dark));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   DataInjection().inject();
+  ProductInjection().inject();
   runApp(const MyApp());
 }
 
@@ -50,6 +53,9 @@ class MyAppState extends State<MyApp> {
       providers: [
         BlocProvider(
           create: (context) => AuthCubit(),
+        ),
+        BlocProvider(
+          create: (context) => ProductsCubit(),
         ),
       ],
       child: GetMaterialApp(
