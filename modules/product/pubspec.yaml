@@ -12,6 +12,9 @@ dependencies:
   core:
     path: ../core
 
+  #route
+  auto_route: ^9.2.2
+
   #build
   build_runner: ^2.4.12
   injectable_generator: ^2.6.2

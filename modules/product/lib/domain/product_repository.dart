@@ -6,7 +6,7 @@ abstract class ProductRepository {
 
   Future<ProductModel> addNewProduct(ProductParams param);
 
-  Future<ProductModel> updateProduct(String productId, ProductParams param);
+  Future<ProductModel> updateProduct(num productId, ProductParams param);
 
-  Future<void> deleteProduct(String productId);
+  Future<void> deleteProduct(num productId);
 }

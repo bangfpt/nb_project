@@ -18,12 +18,12 @@ abstract class ProductApi {
 
   @PUT('/products/{productId}')
   Future<ProductModel> updateProduct(
-    @Path('productId') String productId,
+    @Path('productId') num productId,
     @Body() ProductParams param,
   );
 
   @DELETE('/products/{productId}')
   Future<void> deleteProduct(
-    @Path('productId') String productId,
+    @Path('productId') num productId,
   );
 }

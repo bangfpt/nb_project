@@ -44,9 +44,9 @@ class DataInjection {
       ));
     }
 
-    _getIt.registerLazySingleton(() {
-      return dio;
-    });
+    // _getIt.registerLazySingleton(() {
+    //   return dio;
+    // });
     _getIt.registerLazySingleton(() => AuthApi(dio));
     _getIt.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(
           _getIt.get<AuthApi>(),

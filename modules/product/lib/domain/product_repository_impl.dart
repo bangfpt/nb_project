@@ -23,7 +23,7 @@ class ProductRepositoryImpl extends ProductRepository {
   }
 
   @override
-  Future<void> deleteProduct(String productId) async {
+  Future<void> deleteProduct(num productId) async {
     try {
       final response = await productApi.deleteProduct(productId);
       return response;
@@ -45,8 +45,7 @@ class ProductRepositoryImpl extends ProductRepository {
   }
 
   @override
-  Future<ProductModel> updateProduct(
-      String productId, ProductParams param) async {
+  Future<ProductModel> updateProduct(num productId, ProductParams param) async {
     try {
       final response = await productApi.updateProduct(productId, param);
       return response;
