@@ -1,13 +1,14 @@
-import 'package:auth/data/data.dart';
-import 'package:auth/presentation/screen/auth/form/sign_in_form_model.dart';
-import 'package:core/core/const/status_enum.dart';
-import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:reactive_forms/reactive_forms.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gradient_elevated_button/gradient_elevated_button.dart';
+import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:reactive_forms/reactive_forms.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+
+import 'package:auth/data/data.dart';
+import 'package:core/core/const/status_enum.dart';
+import 'package:auth/presentation/screen/auth/form/sign_in_form_model.dart';
+import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 
 import 'cubit/auth_cubit.dart';
 

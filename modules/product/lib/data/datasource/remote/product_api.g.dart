@@ -92,7 +92,7 @@ class _ProductApi implements ProductApi {
 
   @override
   Future<ProductModel> updateProduct(
-    String productId,
+    num productId,
     ProductParams param,
   ) async {
     final _extra = <String, dynamic>{};
@@ -128,7 +128,7 @@ class _ProductApi implements ProductApi {
   }
 
   @override
-  Future<void> deleteProduct(String productId) async {
+  Future<void> deleteProduct(num productId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

@@ -30,7 +30,7 @@ class ProductUseCase {
   }
 
   Future<Either<ProductModel, Exception>> updateProduct(
-    String productId,
+    num productId,
     ProductParams param,
   ) async {
     try {
@@ -42,7 +42,7 @@ class ProductUseCase {
   }
 
   Future<Either<void, Exception>> deleteProduct(
-    String productId,
+    num productId,
   ) async {
     try {
       final result = await _repository.deleteProduct(
