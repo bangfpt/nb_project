@@ -1,5 +1,5 @@
-import 'package:auth/presentation/screen/auth/sign_in_screen.dart';
 import 'package:get/get.dart';
+import 'package:newbie_project/screen/splash/splash_screen.dart';
 
 import 'screen/home_screen.dart';
 import 'screen/splash/splash_binding.dart';
@@ -13,7 +13,7 @@ class MainRoutePages {
   static final pages = [
     GetPage(
         name: MainRouteName.splash,
-        page: () => const SignInScreen(),
+        page: () => const SplashScreen(),
         binding: SplashBinding()),
     GetPage(
         name: MainRouteName.home,

@@ -1,11 +1,14 @@
-import 'package:auth/data/datasource/remote/auth_api.dart';
 import 'package:dio/dio.dart';
+import 'package:get_it/get_it.dart';
+import 'package:flutter/foundation.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
+import 'package:auth/data/datasource/remote/auth_api.dart';
+
+import 'repository_impl.dart';
 import '../domain/repository.dart';
 import 'datasource/local/shared_preference.dart';
 import 'datasource/local/shared_prefrence_imp.dart';
-import 'repository_impl.dart';
-import 'package:get_it/get_it.dart';
 
 class DataInjection {
   final _getIt = GetIt.instance;
@@ -29,6 +32,17 @@ class DataInjection {
       ..options.headers = {
         'Content-Type': 'application/json; charset=utf-8',
       };
+    if (kDebugMode) {
+      dio.interceptors.add(PrettyDioLogger(
+        requestHeader: kDebugMode,
+        requestBody: kDebugMode,
+        responseBody: kDebugMode,
+        responseHeader: kDebugMode,
+        error: kDebugMode,
+        compact: kDebugMode,
+        maxWidth: 90,
+      ));
+    }
 
     _getIt.registerLazySingleton(() {
       return dio;

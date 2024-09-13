@@ -2,7 +2,7 @@ import 'app_localizations.dart';
 
 /// The translations for English (`en`).
 class ModuleLocalizationImpEn extends ModuleLocalizationImp {
-  ModuleLocalizationImpEn([String locale = 'en']) : super(locale);
+  ModuleLocalizationImpEn([super.locale = 'en']);
 
   @override
   String get dialog_message_done_button => 'Done';
