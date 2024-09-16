@@ -2,6 +2,7 @@ name: product
 description: "A new Flutter module project."
 
 version: 1.0.0+1
+publish_to: none
 
 environment:
   sdk: ^3.5.2
@@ -16,6 +17,7 @@ dependencies:
   auto_route: ^9.2.2
 
   #build
+  flutter_lints: ^4.0.0
   build_runner: ^2.4.12
   injectable_generator: ^2.6.2
   retrofit_generator: ^9.1.2
@@ -51,9 +53,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
 
 flutter:
+  generate: true
   uses-material-design: true
 
   module:
