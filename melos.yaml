@@ -13,4 +13,4 @@ scripts:
     ignoreErrors: true
   generate:
     exec: flutter pub run build_runner build --delete-conflicting-outputs
-    ignoreErrors: true  
+    ignoreErrors: true

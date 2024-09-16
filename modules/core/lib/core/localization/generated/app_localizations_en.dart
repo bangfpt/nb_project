@@ -1,18 +1,20 @@
 import 'app_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for English (`en`).
 class ModuleLocalizationImpEn extends ModuleLocalizationImp {
-  ModuleLocalizationImpEn([super.locale = 'en']);
+  ModuleLocalizationImpEn([String locale = 'en']) : super(locale);
 
   @override
-  String get dialog_message_done_button => 'Done';
+  String get dialogMessageDoneButton => 'Done';
 
   @override
-  String get dialog_message_title => 'Notice';
+  String get dialogMessageTitle => 'Notice';
 
   @override
-  String get required_info => 'Required info';
+  String get requiredInfo => 'Required info';
 
   @override
-  String get invalid_input => 'Invalid input';
+  String get invalidInput => 'Invalid input';
 }

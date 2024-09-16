@@ -8,6 +8,8 @@ import 'package:intl/intl.dart' as intl;
 import 'app_localizations_en.dart';
 import 'app_localizations_vi.dart';
 
+// ignore_for_file: type=lint
+
 /// Callers can lookup localized strings with an instance of ModuleLocalizationImp
 /// returned by `ModuleLocalizationImp.of(context)`.
 ///
@@ -93,29 +95,29 @@ abstract class ModuleLocalizationImp {
     Locale('vi')
   ];
 
-  /// No description provided for @dialog_message_done_button.
+  /// No description provided for @dialogMessageDoneButton.
   ///
   /// In en, this message translates to:
   /// **'Done'**
-  String get dialog_message_done_button;
+  String get dialogMessageDoneButton;
 
-  /// No description provided for @dialog_message_title.
+  /// No description provided for @dialogMessageTitle.
   ///
   /// In en, this message translates to:
   /// **'Notice'**
-  String get dialog_message_title;
+  String get dialogMessageTitle;
 
-  /// No description provided for @required_info.
+  /// No description provided for @requiredInfo.
   ///
   /// In en, this message translates to:
   /// **'Required info'**
-  String get required_info;
+  String get requiredInfo;
 
-  /// No description provided for @invalid_input.
+  /// No description provided for @invalidInput.
   ///
   /// In en, this message translates to:
   /// **'Invalid input'**
-  String get invalid_input;
+  String get invalidInput;
 }
 
 class _ModuleLocalizationImpDelegate extends LocalizationsDelegate<ModuleLocalizationImp> {
