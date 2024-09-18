@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'package:auth/data/data.dart';
 
-import '../data/datasource/local/shared_preference.dart';
 import '../data/datasource/remote/auth_api.dart';
+import '../data/datasource/local/shared_preference.dart';
 
 import 'auth_repository.dart';
 
@@ -30,4 +30,7 @@ class AuthRepositoryImpl extends AuthRepository {
   @override
   Future<void> saveAccessToken(String accessToken) =>
       sharedPreference.saveAccessToken(accessToken);
+
+  @override
+  Future<void> logout() => sharedPreference.removeAccessToken();
 }

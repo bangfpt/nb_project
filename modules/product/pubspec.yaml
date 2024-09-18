@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
   core:
     path: ../core
+  auth:
+    path: ../auth
 
   #route
   auto_route: ^9.2.2

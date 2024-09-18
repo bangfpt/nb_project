@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:product/presentation/cubit/products_cubit.dart';
 import 'package:product/presentation/widgets/product_item.dart';
+import 'package:auth/presentation/screen/auth/cubit/auth_cubit.dart';
 
 class ProductScreen extends StatefulWidget implements AutoRouteWrapper {
   const ProductScreen({super.key});
@@ -33,6 +34,12 @@ class _ProductScreenState extends State<ProductScreen> {
       builder: (context, state) => Scaffold(
         appBar: AppBar(
           title: const Text('Products'),
+          actions: [
+            IconButton(
+              onPressed: () => context.read<AuthCubit>().signOut(context),
+              icon: const Icon(Icons.logout),
+            ),
+          ],
         ),
         body: SafeArea(
           child: Padding(

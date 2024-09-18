@@ -4,4 +4,6 @@ abstract class AuthRepository {
   Future<void> saveAccessToken(String accessToken);
 
   Future<void> login(String username, String password);
+
+  Future<void> logout();
 }

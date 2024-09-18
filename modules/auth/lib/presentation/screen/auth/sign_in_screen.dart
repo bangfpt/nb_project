@@ -11,6 +11,7 @@ import 'package:auth/presentation/screen/auth/form/sign_in_form_model.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 
 import 'cubit/auth_cubit.dart';
+import 'widgets/reactive_password_field.dart';
 
 class SignInScreen extends StatelessWidget implements AutoRouteWrapper {
   const SignInScreen({super.key});
@@ -48,9 +49,9 @@ class SignInScreen extends StatelessWidget implements AutoRouteWrapper {
                   },
                 ),
                 const SizedBox(height: 12),
-                ReactiveTextField(
+                ReactivePasswordField(
                   formControl: formModel.passwordControl,
-                  decoration: const InputDecoration(hintText: 'Password'),
+                  hintText: 'Password',
                   validationMessages: {
                     ValidationMessage.required: (error) =>
                         'Password không được để trống',
