@@ -1,23 +1,15 @@
-import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:product/presentation/cubit/products_cubit.dart';
 import 'package:product/presentation/widgets/product_item.dart';
 import 'package:auth/presentation/screen/auth/cubit/auth_cubit.dart';
 
-class ProductScreen extends StatefulWidget implements AutoRouteWrapper {
+class ProductScreen extends StatefulWidget {
   const ProductScreen({super.key});
 
   @override
   State<ProductScreen> createState() => _ProductScreenState();
-
-  @override
-  Widget wrappedRoute(BuildContext context) {
-    return BlocProvider(
-        create: (context) => GetIt.instance.get<ProductsCubit>());
-  }
 }
 
 class _ProductScreenState extends State<ProductScreen> {

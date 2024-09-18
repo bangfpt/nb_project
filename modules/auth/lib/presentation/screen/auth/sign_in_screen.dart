@@ -1,6 +1,4 @@
-import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -13,13 +11,8 @@ import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 import 'cubit/auth_cubit.dart';
 import 'widgets/reactive_password_field.dart';
 
-class SignInScreen extends StatelessWidget implements AutoRouteWrapper {
+class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
-
-  @override
-  Widget wrappedRoute(BuildContext context) {
-    return BlocProvider(create: (context) => GetIt.instance.get<AuthCubit>());
-  }
 
   @override
   Widget build(BuildContext context) {

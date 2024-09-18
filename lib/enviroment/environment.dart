@@ -1,4 +1,3 @@
-// variable can change during use app
 import '../modules/base_module.dart';
 
 abstract class Environment {

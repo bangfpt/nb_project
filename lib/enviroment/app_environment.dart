@@ -1,5 +1,6 @@
-import '../modules/app_module.dart';
 import 'environment.dart';
+
+import '../modules/app_module.dart';
 
 class AppEnv extends Environment {
   AppEnv._({
@@ -10,7 +11,7 @@ class AppEnv extends Environment {
 
   static final dev = AppEnv._(
     name: 'development',
-    baseUrl: "https://fakestoreapi.com",
+    baseUrl: "",
     modules: AppModules(),
   );
 }
