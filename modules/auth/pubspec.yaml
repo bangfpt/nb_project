@@ -64,9 +64,6 @@ dependencies:
   flutter_easyloading: ^3.0.5
   gradient_elevated_button: ^1.0.0
 
-  #route
-  auto_route: ^9.2.2
-
   #data
   get_storage: ^2.1.1
 

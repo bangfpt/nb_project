@@ -15,9 +15,6 @@ dependencies:
   auth:
     path: ../auth
 
-  #route
-  auto_route: ^9.2.2
-
   #build
   flutter_lints: ^4.0.0
   build_runner: ^2.4.12

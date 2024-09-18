@@ -6,8 +6,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-import 'package:auth/data/injection.dart';
-import 'package:product/data/injection.dart';
+import 'package:core/network/network_module.dart';
 import 'package:product/presentation/cubit/products_cubit.dart';
 import 'package:auth/presentation/screen/auth/cubit/auth_cubit.dart';
 
@@ -31,8 +30,7 @@ void start() async {
       statusBarColor: Colors.transparent,
       statusBarBrightness: Brightness.dark));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  DataInjection().inject();
-  ProductInjection().inject();
+  NetworkModule();
   runApp(const MyApp());
 }
 
