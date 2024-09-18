@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:auth/data/data.dart';
+import 'package:core/core/utils/either.dart';
 
 import '../data/datasource/remote/auth_api.dart';
 import '../data/datasource/local/shared_preference.dart';
@@ -13,14 +14,17 @@ class AuthRepositoryImpl extends AuthRepository {
   AuthRepositoryImpl(this.authApi, this.sharedPreference);
 
   @override
-  Future<void> login(String username, String password) async {
+  Future<Either<void, Exception>> login(
+      String username, String password) async {
     try {
       final params = LoginParam(username, password);
       final response = await authApi.login(params);
 
       await saveAccessToken(response.token);
-    } catch (e) {
+      return const Left(null);
+    } on Exception catch (e) {
       log('login error $e');
+      return Right(e);
     }
   }
 
