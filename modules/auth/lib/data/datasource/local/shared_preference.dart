@@ -8,4 +8,5 @@ abstract class SharedPreference {
 
   Future<void> saveAccessToken(String accessToken);
 
+  Future<void> removeAccessToken();
 }

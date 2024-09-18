@@ -14,4 +14,9 @@ class SharedPreferenceImp extends SharedPreference {
   Future<void> saveAccessToken(String accessToken) {
     return GetStorage(prefBox).write(keyAccessToken, accessToken);
   }
+
+  @override
+  Future<void> removeAccessToken() {
+    return GetStorage(prefBox).remove(keyAccessToken);
+  }
 }
